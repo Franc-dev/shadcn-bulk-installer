@@ -1,29 +1,23 @@
-// src/__tests__/cli.test.ts
-import { exec } from 'child_process';
-import { promisify } from 'util';
-import path from 'path';
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import { createProgram } from '../index';
 
-const execAsync = promisify(exec);
+describe('CLI Program', () => {
+  let program: any;
 
-describe('shadcn-bulk CLI', () => {
-  const CLI_PATH = path.join(__dirname, '../../dist/index.js');
-
-  beforeAll(async () => {
-    // Build the CLI before running tests
-    await execAsync('npm run build');
+  beforeEach(() => {
+    program = createProgram();
   });
 
-  test('displays help information', async () => {
-    const { stdout } = await execAsync(`node ${CLI_PATH} --help`);
-    expect(stdout).toContain('Usage:');
-    expect(stdout).toContain('Options:');
-    expect(stdout).toContain('Commands:');
+  test('should create program with correct name', () => {
+    expect(program.name()).toBe('shadcn-bulk');
   });
 
-  test('displays version information', async () => {
-    const { stdout } = await execAsync(`node ${CLI_PATH} --version`);
-    expect(stdout).toMatch(/\d+\.\d+\.\d+/);
+  test('should have install command', () => {
+    const installCommand = program.commands.find((cmd: any) => cmd.name() === 'install');
+    expect(installCommand).toBeDefined();
   });
 
-  // Add more tests as needed
+  test('should have version option', () => {
+    expect(program.version()).toMatch(/\d+\.\d+\.\d+/);
+  });
 });

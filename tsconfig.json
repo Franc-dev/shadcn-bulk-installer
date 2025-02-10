@@ -1,15 +1,14 @@
 // tsconfig.json
 {
     "compilerOptions": {
-      "target": "ES2020",
-      "module": "CommonJS",
-      "outDir": "./dist",
-      "rootDir": "./src",
-      "strict": true,
+      "target": "es2022",
+      "module": "NodeNext",
+      "moduleResolution": "NodeNext",
       "esModuleInterop": true,
+      "strict": true,
       "skipLibCheck": true,
       "forceConsistentCasingInFileNames": true
     },
-    "include": ["src/**/*"],
+    "include": ["src/**/*", "__tests__/**/*"],
     "exclude": ["node_modules"]
   }
