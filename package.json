@@ -1,6 +1,6 @@
 {
   "name": "shadcn-bulk-installer",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Bulk installer for shadcn/ui components with interactive CLI",
   "publishConfig": {
     "access": "public"

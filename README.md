@@ -3,9 +3,17 @@
 A CLI tool for bulk installation of shadcn/ui components with an interactive interface and progress tracking.
 
 <!-- image preview for test/png -->
+
+<p align="center">
+  <img src="public/preview.png" alt="shadcn-bulk-installer preview" />
+</p>
+<p align="center">
+  <img src="public/install.png" alt="shadcn-bulk-installer preview" />
+</p>
 <p align="center">
   <img src="public/test.png" alt="shadcn-bulk-installer preview" />
 </p>
+
 ## Prerequisites
 
 Make sure you have a Next.js project with shadcn/ui properly initialized. If not, follow these steps:
