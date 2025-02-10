@@ -11,6 +11,9 @@ A CLI tool for bulk installation of shadcn/ui components with an interactive int
   <img src="public/install.png" alt="shadcn-bulk-installer preview" />
 </p>
 <p align="center">
+  <img src="public/finish.png" alt="shadcn-bulk-installer preview" />
+</p>
+<p align="center">
   <img src="public/test.png" alt="shadcn-bulk-installer preview" />
 </p>
 
